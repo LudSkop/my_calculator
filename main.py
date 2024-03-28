@@ -1,4 +1,4 @@
-#
+from colorama import Fore
 result = None 
 operator = None
 operand = None
@@ -6,7 +6,8 @@ wait_for_number = True
 
 
 while True:
-    user_input = input('>>>>:   ')
+    user_input = input(Fore.GREEN + '>>>>:   ')
+    user_input = user_input.strip()
     if user_input == '=':
         break
 
@@ -14,7 +15,7 @@ while True:
         try:
             operand =float(user_input)
         except ValueError:
-            print(f'{user_input} is not a namber')
+            print(Fore.LIGHTRED_EX + f'{user_input} is not a namber')
             continue
         wait_for_number = False
         if result is None:
@@ -28,7 +29,7 @@ while True:
                 result *= operand
             elif operator == '/':
                 if operand == 0:
-                    print('Devision by zero')
+                    print(Fore.BLACK + 'Devision by zero')
                     continue
                 result /= operand
     else:
@@ -37,10 +38,10 @@ while True:
         else:
             operator = None
         if operator is None:
-            print(f"{user_input} is not '+' '-' '*' '/' ")
+            print(Fore.CYAN + f"{user_input} is not '+' '-' '*' '/' ")
         else:
             wait_for_number = True    
-print(result)
+print(Fore.LIGHTMAGENTA_EX + str(result))
 
 
 
