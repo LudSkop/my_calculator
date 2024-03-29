@@ -1,11 +1,8 @@
 from colorama import Fore
 
 
-def main():
-    result = None 
-    operator = None
-    operand = None
-    wait_for_number = True
+def main(result=None, operator=None, operand=None, wait_for_number=True):
+ 
     while True:
         user_input = input(Fore.GREEN + '>>>>:   ')
         user_input = user_input.strip()
