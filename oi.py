@@ -1,15 +1,24 @@
-from colorama import Fore
+def get_name():
+    name = input('Write your name.>> ')
+    return name
+def greet(name):
+    print(f'Hello {name}')
 
-from  main import main
+def main():
+    name = get_name()
+    greet(name)
 
 
-
-def my_calculator():
-    anabel = print(eval(input('Введіть дані для розрахунку:  ')))
-
-
-
-
-if __name__ == '__main__':
-    my_calculator()
+if __name__ == "__main__":
+    print(f'__name__ == {__name__}')
     main()
+
+
+
+
+
+
+
+
+
+
