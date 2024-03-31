@@ -1,9 +1,10 @@
-def is_hungry():
-    return True
+def  pay_payment(x, y, a, ):
+    result = x + y - a
+    return result
 
 
-if is_hungry():
-    print('Please eat')
-else:
-    print('badly')
 
+
+
+res = pay_payment(167, 37, 100, )
+print(res)
