@@ -12,5 +12,5 @@ def  pay_payment(params_1,  *args , **kwargs):
 
 
 
-res = pay_payment(167, 37,53,7, 4, 7, s=234, liuda=200, vlad= 2000, oleg= 1000,   )
+res = pay_payment(167,    )
 print(res)
