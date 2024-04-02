@@ -1,15 +1,10 @@
-def factorial(n):
-    if n == 0:
+
+def fib(n):
+    if n in(1, 2):
         return 1
-    else:
-        return n * factorial(n -1)
-    
+    return fib(n - 1) + fib(n - 2)
 
-
-print(factorial(10))
-
-
-
+print(fib(6))
 
 
 
