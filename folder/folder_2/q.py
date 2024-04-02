@@ -1,9 +1,10 @@
+x = 50 #global scope
 def outer():
-    x = 'local x'
+    x = 'local x'#enclosed scope
 
     def inner():
         nonlocal x
-        x = 'nonlocal x'
+        x = 'nonlocal x'#local scope
         print(f'inner function: {x}')
 
 
