@@ -1,16 +1,13 @@
-def  pay_payment(params_1,  *args , **kwargs):
-    print(params_1)
-    print( args)
-    print(type(args))
-    print(kwargs)
-    print(type(kwargs))
-    
-   
-    
+
+x = 50
+
+def test(x):
+    print(f'x is {x}')
+    x = 2
+    print(f'changed lokal x to {x}')
 
 
 
 
-
-res = pay_payment(167,    )
-print(res)
+test(11)
+print(f'x in the end {x}')
