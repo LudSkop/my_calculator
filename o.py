@@ -1,16 +1,14 @@
-from oi import get_name
-
-def goodbuy(name):
-    print(f'Goodbuy {name} ')
-
-def main():
-    name = get_name()
-    goodbuy(name)
+import random
+import math
+import decimal
 
 
-if __name__ == "__main__":
-    print(f'__name__ == { __name__}')
-    main()
+for item in range(5):
+    print(random.randint(1, 10))
+    
+
+
+
 
 
 
