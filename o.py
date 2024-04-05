@@ -1,18 +1,10 @@
-# Порахувати суму всіх аргументів
-def sum(start, *args):
-    sum = start
-    for element in args:
-        sum += element
-    return sum
-    
+# Порахувати суму всіх чисел чурез рекурсію.
+# 10 -> 10 + 9 + 8 + 7 + 6 + 5 ..... + 1
+sum = 0
+for num in range(1, 11):
+    sum += num
 
-result = sum( 5, 5, 5, 5, 1, 12)
-print(result)
-
-
-
-
-
+print(sum)
 
 
 
