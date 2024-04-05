@@ -1,21 +1,23 @@
-# Створити функцію яка приймає рядок  і повертає словник відповідно ASCII.
-#Make func who take string and return dictionary with ASCII. 
+# Написати функцію яка визначає чи є число простим.
 
-from pprint import pprint
-from colorama import Fore
+def is_prime(n:int)-> bool:
+    if n <= 1:
+        return False
+    for i in range(2, n):
+        if n % i == 0:
+            return False
+    return True    
 
-def anabel(string:str)-> dict:
-    dic = {}
-    for element in string:
-        if  not element in dic:
-            dic[element]= ord(element)
-    return dic
-    
-    
-pprint(anabel(Fore.RED + 'hello world, slisa and, pusha and,'))
+def main():
+    value =int(input('Please enter the number:  ')) 
+    if is_prime(value):
+        print(f'{value} - це просте число')
+    else:
+        print(f'{value} -не є простим числом')
 
 
-
+if __name__ == "__main__":
+    main()
 
 
 
