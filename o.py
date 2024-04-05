@@ -1,11 +1,15 @@
-import random
-import math
-import decimal
-
-
-for item in range(5):
-    print(random.randint(1, 10))
+# Порахувати суму всіх аргументів
+def sum(start, *args):
+    sum = start
+    for element in args:
+        sum += element
+    return sum
     
+
+result = sum( 5, 5, 5, 5, 1, 12)
+print(result)
+
+
 
 
 
