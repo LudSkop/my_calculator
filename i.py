@@ -1,5 +1,6 @@
 # Написати функцію яка визначає чи є число простим.
 from colorama import Fore
+from tabulate import tabulate
 
         
 def is_prime(n:int)-> bool:
@@ -11,20 +12,26 @@ def is_prime(n:int)-> bool:
     return True    
 
 def main():
+    data ={}
+    data['prime'] = []
+    data['composite'] = []
     while True:
         value =int(input(Fore.RED + 'Please enter the number:  ')) 
         if is_prime(value):
             print(Fore.GREEN + f'{value} - це просте число')
+            data['prime'].append(value)
         else:   
             print(Fore.LIGHTYELLOW_EX + f'{value} -не є простим числом')
+            data['composite'].append(value)
         if value == 6:
             break
+    return data    
 
 
 if __name__ == "__main__":
    
-
-  main()
+    tab = tabulate(main(), headers='keys', tablefmt='grid')
+    print(tab)
 
 
 
