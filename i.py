@@ -1,4 +1,5 @@
 # Написати функцію яка визначає чи є число простим.
+from colorama import Fore
 
 def is_prime(n:int)-> bool:
     if n <= 1:
@@ -9,11 +10,11 @@ def is_prime(n:int)-> bool:
     return True    
 
 def main():
-    value =int(input('Please enter the number:  ')) 
+    value =int(input(Fore.RED + 'Please enter the number:  ')) 
     if is_prime(value):
-        print(f'{value} - це просте число')
+        print(Fore.GREEN + f'{value} - це просте число')
     else:
-        print(f'{value} -не є простим числом')
+        print(Fore.LIGHTYELLOW_EX + f'{value} -не є простим числом')
 
 
 if __name__ == "__main__":
