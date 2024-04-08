@@ -1,6 +1,6 @@
 # Розрахувати прибуток без затрат на матеріали , якщо: р - ціна за 1 листівку, n - це кількість заказаних листівок і може бути тільки кратне 100
 
-
+from colorama import Fore
 
 
 
@@ -13,10 +13,10 @@ def profit(p, n):
     namber_order = n // 100
     return p * n - namber_order * (75 + 120 + 20)
 
-print(profit(235, 500))
-print(profit(189, 800))
-print(profit(230, 39))
-print(profit(50, 299))
+print( profit(235, 500))
+print( profit(189, 800))
+print( profit(230, 39))
+print( profit(50, 299))
 
 
 
