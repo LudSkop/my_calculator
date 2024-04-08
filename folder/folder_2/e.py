@@ -1,26 +1,22 @@
-# Розрахувати прибуток без затрат на матеріали , якщо: р - ціна за 1 листівку, n - це кількість заказаних листівок і може бути тільки кратне 100
-
-from colorama import Fore
 
 
 
 
 
-def profit(p, n):
-    if n %100 != 0:
-        print('Введіть число кратне 100: ')
-        return
-    namber_order = n // 100
-    return p * n - namber_order * (75 + 120 + 20)
-
-print( profit(235, 500))
-print( profit(189, 800))
-print( profit(230, 39))
-print( profit(50, 299))
-
-
+def factorial(n):
+    if n < 2:
+        return 1
+    else:
+        return n * factorial(n - 1)
+    
+def number_of_groups(n, k):
+    a = factorial(n)
+    b = factorial(n - 1)
+    c = factorial(k)
+    return int(a // b * c)
 
 
 
-
+print(factorial(7))
+print(number_of_groups(10, 4))
 
