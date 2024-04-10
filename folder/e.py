@@ -4,7 +4,7 @@ number_dict = {}
 
 for char in ankor:
     try:
-        count = number_dict[char]
+        count = number_dict.get(char, 0)
     except KeyError:
         count = 0
 
