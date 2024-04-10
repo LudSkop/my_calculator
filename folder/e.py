@@ -1,23 +1,18 @@
+text = 'I dont believe you. His offer seems so goot.\
+      You olways say it .\
+          123 it  i dont want to think about it.\
+            I need it 2008.!!! >><<.'
 
-ankor = 'He wants to do it right now.'
-number_dict = {}
+alphabet ='A B C D E F G H I J K L M N O P Q R S T U V W X Y Z'
 
-for char in ankor:
-    try:
-        count = number_dict.get(char, 0)
-    except KeyError:
-        count = 0
-
-    count += 1
-    number_dict[char] = count
-
-
-
-
-print(number_dict)
+char_set = set()
+symbol_set = set()
+for el in text:
+    if el.upper() in alphabet:
+        char_set.add(el)
+    else:
+        symbol_set.add(el)
 
 
-
-
-
-
+print(f'char : {char_set}')
+print(f'symbol: {symbol_set}')
