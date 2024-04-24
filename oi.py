@@ -1,24 +1,21 @@
-def get_name():
-    name = input('Write your name.>> ')
-    return name
-def greet(name):
-    print(f'Hello {name}')
+#Потрібно створити список в якому будуть лише цифри із строки.
 
-def main():
-    name = get_name()
-    greet(name)
+offer = 'ae26j70k3678dgfgghr65776787dvsdgfhfert569#!6'
+
+number = []
+ 
+for el in offer:
+    if '0'<= el <= '9':
+       number.append(el)
 
 
-if __name__ == "__main__":
-    print(f'__name__ == {__name__}')
-    main()
+number_set = set(number)    
 
 
 
 
 
 
-
-
-
-
+print(number)
+print(type(number_set))
+print(number_set)
