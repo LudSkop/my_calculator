@@ -3,13 +3,29 @@ import sys
 
 
 p = Path(sys.argv[1])
-def  parse_folder(path:Path): 
+# def  parse_folder(path:Path): 
+#     for el in path.iterdir():
+#         if el.is_dir():
+#             print(f'parse_folder: this is folder {el.name}') 
+#         else:
+#             print(f'parse_folder: this is file {el.name}')
+
+
+# if __name__ == "__main__":
+#     parse_folder(p)
+def parse_folder_recursion(path:Path):
     for el in path.iterdir():
         if el.is_dir():
-            print(f'parse_folder: this is folder {el.name}') 
+            print(f'parse_folder: this is folder {el.name}')
+            parse_folder_recursion(el)
         else:
-            print(f'parse_folder: this is file {el.name}')
+            print(f'parse_file: this is file  {el.name}')
+
+
 
 
 if __name__ == "__main__":
-    parse_folder(p)
+    parse_folder_recursion(p)
+
+
+
