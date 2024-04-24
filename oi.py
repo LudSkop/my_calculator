@@ -9,7 +9,23 @@ for el in offer:
        number.append(el)
 
 
-number_set = set(number)    
+number_set = set(number)
+print(number_set)
+
+number_dict = {}
+for element in number:
+    number_dict[element] = int(element)
+    
+    
+
+
+
+
+print(number_dict)
+
+
+
+
 
 
 
@@ -18,4 +34,3 @@ number_set = set(number)
 
 print(number)
 print(type(number_set))
-print(number_set)
