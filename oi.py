@@ -1,18 +1,25 @@
-# Знайти в строці підстроку.
+string = 'Hello world [my love], and [i like it] do they often discuss it. '
 
-main_string = input('Введіть строку: ')
-sub_string = input('Введіть підстроку для пошуку: ')
-index_string = main_string.find(sub_string)
-if index_string != -1:
-    print(f'Знайдена підстрока в строці за таким індексом: {index_string}')
-else:
-    print(f'Підстрока не знайдена')
+# start_index = string.find('[')
+# end_index = string.find(']')
+
+# new_string = string[:start_index] + string[end_index + 1]
 
 
+# print(new_string)
+
+def sanitize(sting):
+    new_string = string[:]
+    while True:
+        start_index = new_string.find('[')
+        end_index = new_string.find(']')
+        if start_index == -1:
+            break
+        new_string = new_string[:start_index] + new_string[end_index +1 :]
+    return new_string
 
 
-
-
+print(sanitize(string))
 
 
 
