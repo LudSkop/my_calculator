@@ -1,22 +1,18 @@
 from colorama import Fore
 
 
-string = 'Hello world [my love], and [i like it] do they often discuss it. '
+string ='My father usually comes home late, 2000-2024, i see everthing 78 this lesson seems interesting 1980.'
+
+def count_digits(string):
+    count = 0
+    for el in string:
+        if el.isdigit():
+            count += 1
+    return count        
 
 
-def sanitize(sting):
-    new_string = string[:]
-    while True:
-        start_index = new_string.find('[')
-        end_index = new_string.find(']')
-        if start_index == -1:
-            break
-        new_string = new_string[:start_index] + new_string[end_index +1 :]
-    return new_string
 
-
-print(Fore.LIGHTRED_EX + sanitize( string))
-
+print(count_digits(string))
 
 
 
