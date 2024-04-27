@@ -1,12 +1,8 @@
+from colorama import Fore
+
+
 string = 'Hello world [my love], and [i like it] do they often discuss it. '
 
-# start_index = string.find('[')
-# end_index = string.find(']')
-
-# new_string = string[:start_index] + string[end_index + 1]
-
-
-# print(new_string)
 
 def sanitize(sting):
     new_string = string[:]
@@ -19,7 +15,7 @@ def sanitize(sting):
     return new_string
 
 
-print(sanitize(string))
+print(Fore.LIGHTRED_EX + sanitize( string))
 
 
 
