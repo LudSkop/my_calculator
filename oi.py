@@ -3,17 +3,21 @@ from colorama import Fore
 
 string ='My father usually comes home late, 2000-2024, i see everthing 78 this lesson seems interesting 1980.'
 
-def count_digits(string):
+def count_number(string):
     count = 0
-    for el in string:
-        if el.isdigit():
+    position = 0
+    nums = []
+    while position < len(string):
+        if string[position].isdigit():
+            num =''
+            while position < len(string) and string[position].isdigit():
+                num += string[position]
+                position +=1
+            nums.append(num)
             count += 1
-    return count        
+        else:
+            position += 1
+    return count, nums      
 
 
-
-print(count_digits(string))
-
-
-
-
+print(count_number(string))
