@@ -1,31 +1,14 @@
-from pathlib import Path
-import sys 
+def bubble_sort(some_list):
+    length_list = len(some_list)
 
-
-p = Path(sys.argv[1])
-# def  parse_folder(path:Path): 
-#     for el in path.iterdir():
-#         if el.is_dir():
-#             print(f'parse_folder: this is folder {el.name}') 
-#         else:
-#             print(f'parse_folder: this is file {el.name}')
-
-
-# if __name__ == "__main__":
-#     parse_folder(p)
-def parse_folder_recursion(path:Path):
-    for el in path.iterdir():
-        if el.is_dir():
-            print(f'parse_folder: this is folder {el.name}')
-            parse_folder_recursion(el)
-        else:
-            print(f'parse_file: this is file  {el.name}')
-
-
+    for count in range(length_list-1):
+        for index in range(length_list - 1 - count):
+            if some_list[index] > some_list[index + 1]:
+                some_list[index],some_list[index + 1] = some_list[index + 1], some_list[index]
+    return some_list
 
 
 if __name__ == "__main__":
-    parse_folder_recursion(p)
-
-
-
+    a = [10, 5, 2, 0, -4, 3, 3, 7,] 
+    b = [-2, -7, 7, -2, -3]   
+    print(bubble_sort(b))
