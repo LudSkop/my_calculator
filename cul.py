@@ -1,14 +1,18 @@
-def bubble_sort(some_list):
-    length_list = len(some_list)
+pay_system = {
+    5 : 'MasterCard',
+    4 : 'Visa',
+    3 : 'American Express'
+}
+card_numbers = ['5553336668889994', '4444444488888888', '3333556677889908', '234567832ouy6789']
 
-    for count in range(length_list-1):
-        for index in range(length_list - 1 - count):
-            if some_list[index] > some_list[index + 1]:
-                some_list[index],some_list[index + 1] = some_list[index + 1], some_list[index]
-    return some_list
+def is_valid_card(card:str)-> bool:
+    return card.isdigit() and len(card) == 16
+
+for card in card_numbers:
+    string = 'Номер картки: {:<8}  платіжна система: {:^16} картка валідна: {:>16}'
+    print(string.format(card, pay_system.get(int(card[0]), 'Unknown'), str(is_valid_card(card))))
 
 
-if __name__ == "__main__":
-    a = [10, 5, 2, 0, -4, 3, 3, 7,] 
-    b = [-2, -7, 7, -2, -3]   
-    print(bubble_sort(b))
+
+
+
