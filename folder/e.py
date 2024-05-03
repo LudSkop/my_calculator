@@ -1,18 +1,27 @@
-text = 'I dont believe you. His offer seems so goot.\
-      You olways say it .\
-          123 it  i dont want to think about it.\
-            I need it 2008.!!! >><<.'
+# Читаємо файл за допомогою бібліотеки pathlib.
 
-alphabet ='A B C D E F G H I J K L M N O P Q R S T U V W X Y Z'
-
-char_set = set()
-symbol_set = set()
-for el in text:
-    if el.upper() in alphabet:
-        char_set.add(el)
-    else:
-        symbol_set.add(el)
+from pathlib import Path
 
 
-print(f'char : {char_set}')
-print(f'symbol: {symbol_set}')
+folders = Path('./folder_2')
+file_name = folders /'step.py'
+
+
+try:
+
+    with open(file_name, 'r', encoding='utf-8') as file:
+        for line in file:
+            print(line, end='')
+except OSError as error:
+    print(f'Error is : {error}')
+finally:
+    print('/n file read complete')
+
+
+
+
+
+
+
+
+
