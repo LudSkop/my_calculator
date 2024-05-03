@@ -1,13 +1,17 @@
+# Читання та запис у файл.
+
+file = open('clear.txt',mode='w',encoding='utf-8')
+file.write('Hello word\n')
+file.write('Hello love\n')
+file.writelines('Hi Vlad\n' 'Hi Oleg\n' 'Hi Alisa\n')
+file.close()
+
+
+file = open('clear.txt', mode='r', encoding='utf-8')
+a = file.readlines()
+print(a)
+file.close()
 
 
 
 
-
-
-
-
-
-
-with open("new.txt", mode="r") as file:
-    a = file.read()
-    print(a)
