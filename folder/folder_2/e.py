@@ -26,7 +26,7 @@ from pathlib import Path
 current_dir = Path('.')
 
 #file = current_dir / 'folder_2'/ 'folder_3'/'e.py'
-file = current_dir /'folder_2'/'e.py'
+file = current_dir/'e.py'
 print(file.exists())
 
 
