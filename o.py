@@ -8,3 +8,9 @@ for el in current_dir.glob('**/*.txt'):
 print(Path.cwd())
 print(current_dir)
 
+
+tnp = Path('new.txt')
+if tnp.exists():
+    tnp.unlink()
+
+
