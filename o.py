@@ -1,16 +1,8 @@
+# Створення директорій за допомогою pathlib.
 from pathlib import Path
 
-
-current_dir = Path('.')
-for el in current_dir.glob('**/*.txt'):
-    print(el)
-
-print(Path.cwd())
-print(current_dir)
-
-
-tnp = Path('new.txt')
-if tnp.exists():
-    tnp.unlink()
-
-
+new_dir = Path('hello')
+new_dir.mkdir(exist_ok=True)
+new_dir.rmdir()
+new_dir = Path('Hello/World/Test')
+new_dir.mkdir(exist_ok=True, parents=True)
