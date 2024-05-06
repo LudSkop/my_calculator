@@ -16,7 +16,7 @@ def scaner(path: Path):
 
 if __name__ == "__main__":
     scaner('folder')
-
+    
 
 
 
