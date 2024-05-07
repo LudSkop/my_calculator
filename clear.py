@@ -18,4 +18,22 @@ cod_3 = b' \xcf\xf0\xe8\xe2\xb3\xf2 \xef\xee\xf2\xb3\xea GOIT 19!'
 print(cod_3.decode('cp1251'))
 
 
+folder = Path('Hello')
+with open(folder/'utf-8.txt','wb') as file:
+    file.write(text.encode())
 
+with open(folder/'utf-16.txt','wb') as file:
+    file.write(text.encode('utf-16'))
+
+with open(folder/'cp1251.txt', 'wb') as file:
+    file.write(text.encode('cp1251'))
+
+
+with open(folder/'utf-8.txt','rb') as file:
+    print(file.read().decode())
+
+with open(folder/'utf-16.txt','rb') as file:
+    print(file.read().decode('utf-16'))
+
+with open(folder/'cp1251.txt', 'rb') as file:
+   print(file.read().decode('cp1251'))
