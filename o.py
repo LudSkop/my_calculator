@@ -1,8 +1,18 @@
-# Створення директорій за допомогою pathlib.
-from pathlib import Path
+# Робота з архівами.
+import shutil
+   
 
-new_dir = Path('hello')
-new_dir.mkdir(exist_ok=True)
-new_dir.rmdir()
-new_dir = Path('Hello/World/Test')
-new_dir.mkdir(exist_ok=True, parents=True)
+print(shutil.get_archive_formats())
+archive = shutil.make_archive('archive_file_name', 'zip','Hello')
+print(archive)
+
+shutil.unpack_archive(archive, 'Archive')
+
+
+
+
+
+
+
+
+
