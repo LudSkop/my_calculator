@@ -1,33 +1,42 @@
-
-
-
-
-
-# def factorial(n):
-#     if n < 2:
-#         return 1
-#     else:
-#         return n * factorial(n - 1)
-    
-# def number_of_groups(n, k):
-#     a = factorial(n)
-#     b = factorial(n - 1)
-#     c = factorial(k)
-#     return int(a // b * c)
-
-
-
-# print(factorial(7))
-# print(number_of_groups(10, 4))
-
+import argparse
 from pathlib import Path
+from shutil import copyfile
 
 
-current_dir = Path('.')
+parser = argparse.ArgumentParser(description='Sorting directory')
+parser.add_argument('--source', '-s', required=True, help='Source folder')
+parser.add_argument('--output', '-0', default='destination',help='Output folder' )
 
-#file = current_dir / 'folder_2'/ 'folder_3'/'e.py'
-file = current_dir/'e.py'
-print(file.exists())
+args = vars(parser.parse_args())
+source =args.get('source') 
+output = args.get('output')
+print(source, output)
+
+def read_folder(path:Path):
+    for element in path.iterdir():
+        if element.is_dir():
+            read_folder(element)
+        else:
+            copy_file(element) 
+
+
+def copy_file(file:Path):
+    ext = file.syffix
+    new_path = 'output_folder' / ext 
+    new_path.mkdir(exist_ok=True, parents=True)
+    copyfile(file, new_path/file.name)  
+
+
+
+
+
+output_folder = Path(output)
+read_folder = Path(source)
+
+
+
+
+
 
 
 
