@@ -1,4 +1,4 @@
-from .bar.infa import log, foo as infa_foo
+from .bar.infa import log, foo as a
 from .baz.operation import sum, mul
 from .foo import foo
 
